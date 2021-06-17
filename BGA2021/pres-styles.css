@@ -1,0 +1,165 @@
+:root {
+  --darken-perc: 20%;
+  --lighten-perc: 25%;
+
+  --col-0-h: 206;
+  --col-0-s: 23%;
+  --col-0-l: 66%;
+
+  --col-1-h: 4;
+  --col-1-s: 68%;
+  --col-1-l: 59%;
+
+  --col-2-h: 190;
+  --col-2-s: 80%;
+  --col-2-l: 60%;
+
+  --col-3-h: 119;
+  --col-3-s: 37%;
+  --col-3-l: 58%;
+
+  --col-4-h: 37;
+  --col-4-s: 84%;
+  --col-4-l: 63%;
+}
+
+.inverse, .hljs-github {
+  background-image: url("ICP2020_2.png");
+  background-size: cover;
+  background-origin: border-box;
+  background-position: center;
+  font-family: "Noto Sans","Roboto","Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 30px;
+}
+
+h1, h2, h3 {
+  font-family: "Cabin","Noto Sans","Roboto","Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.title-slide > h1 {
+  border-bottom: 3pt solid #CC6677;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.remark-slide-number {
+  display: none;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 1.5em;
+  padding-right: 4em;
+  font-size: 80%;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+li {
+  margin-bottom: 0.7em;
+}
+
+img {
+  display: float;
+  background: hsl(0, 0%, 100%, 80%);
+  padding: 20px 20px;
+  border-radius: 15px;
+}
+
+table {
+  background-color: #FFFFFFCC;
+  border-top: 2pt solid #595959AA;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #59595920;
+}
+
+tbody {
+  border-bottom: 2pt solid #595959AA;
+}
+
+th {
+  padding: 10pt 15pt;
+}
+
+td {
+  padding: 3pt 5pt;
+}
+
+table td, th {
+  transition: background 1s;
+  transition-timing-function: ease-out;
+}
+table td:hover, th:hover {
+  background: #F5DF4DAA;
+}
+
+table tr {
+  transition: background 1.5s;
+  transition-timing-function: ease-out;
+}
+table tr:hover {
+  background-color: #fcf5ca;
+}
+
+.left-wide {
+  width: 65%;
+  float: left;
+}
+
+.right-narrow {
+  width: 30%;
+  float: right;
+}
+
+.smaller > p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+.large { font-size: 130% }
+.smaller { font-size: 25px }
+.teeny-tiny { font-size: 15px }
+
+.col-panel {
+  display: block;
+  width: 100%;
+  padding: 15px 15px;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.col-panel.col-0 {
+    background-color: hsl(var(--col-0-h), var(--col-0-s), calc(var(--col-0-l) + var(--lighten-perc)));
+    border: 3px solid hsl(var(--col-0-h), var(--col-0-s), calc(var(--col-0-l) - var(--darken-perc)));
+}
+
+.col-panel.col-1 {
+  background-color: hsl(var(--col-1-h), var(--col-1-s), calc(var(--col-1-l) + var(--lighten-perc)));
+  border: 3px solid hsl(var(--col-1-h), var(--col-1-s), calc(var(--col-1-l) - var(--darken-perc)));
+}
+
+.col-panel.col-2 {
+  background-color: hsl(var(--col-2-h), var(--col-2-s), calc(var(--col-2-l) + var(--lighten-perc)));
+  border: 3px solid hsl(var(--col-2-h), var(--col-2-s), calc(var(--col-2-l) - var(--darken-perc)));
+}
+
+.col-panel.col-3 {
+  background-color: hsl(var(--col-3-h), var(--col-3-s), calc(var(--col-3-l) + var(--lighten-perc)));
+  border: 3px solid hsl(var(--col-3-h), var(--col-3-s), calc(var(--col-3-l) - var(--darken-perc)));
+}
+
+.col-panel.col-4 {
+  background-color: hsl(var(--col-4-h), var(--col-4-s), calc(var(--col-4-l) + var(--lighten-perc)));
+  border: 3px solid hsl(var(--col-4-h), var(--col-4-s), calc(var(--col-4-l) - var(--darken-perc)));
+}
