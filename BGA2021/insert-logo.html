@@ -1,0 +1,35 @@
+<style>
+.logo {
+  background-image: url(qrcode.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 3pt;
+  right: 3pt;
+  width: 88px;
+  height: 110px;
+  z-index: 0;
+  opacity: 0.7;
+  border: 1pt solid black;
+}
+/*
+.logo::after {
+  content: 'scan for the slides';
+  font-size: 8pt;
+}
+*/
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    //':not(.title-slide)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="logo"></div>';
+  });
+</script>
