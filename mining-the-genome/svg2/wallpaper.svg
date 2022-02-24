@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    viewBox="0 0 4000 3000" stroke='white' style='opacity:0.3;'>
+    <!-- 300px 300px -->
+    <defs>
+        <g id='frame'>
+            <circle cx="150" cy="150" r="150" stroke-width="5" />
+            <circle id='inner-frame' cx="150" cy="150" r="135" stroke-width="2.5" />
+        </g>
+
+        <path id='double-helix-shape'
+            d="M 150 0 q -75 30 0 60 t 0 60 t 0 60 t 0 60 t 0 60 t 0 60 m 0 -50 q 75 -30 0 -60 t 0 -60 t 0 -60 t 0 -60 t 0 -60"
+            stroke-width="3px" />
+
+        <clipPath id='frame-clip'>
+            <use href='#inner-frame' />
+        </clipPath>
+
+        <clipPath id='double-helix-clip'>
+            <use href='#double-helix-shape' />
+        </clipPath>
+
+        <pattern id='helix-stripes' patternUnits='userSpaceOnUse' x='0' y='0' width='100' height='11.5'
+            viewBox='0 0 100 10'>
+            <path d="M 0 0 l 100 0" stroke-width='1.5px' />
+        </pattern>
+
+        <g id='double-helix' transform='translate(-50)'>
+            <use href='#double-helix-shape' fill='url(#helix-stripes)' />
+        </g>
+
+        <g id='chip' transform='translate(70 30) scale(0.9)'>
+            <path d="M 105 195 l 90 0 l 0 -120 l -25 -15 l -40 0 l -25 15 l 0 120
+            M 105 100 l 90 0" stroke-width='2px' />
+            <rect x='120' y='120' width='60' height='60' stroke-width='2' />
+            <rect x='130' y='130' width='40' height='40' stroke-width='1.5px' fill='white' fill-opacity='0.2' />
+        </g>
+
+        <g id='lollipops'>
+            <circle cx='180' cy='60' r='15' stroke-width='2.5' />
+            <path d="M 160 60 l -30 0" stroke-width='2' />
+            <circle cx='225' cy='93' r='15' stroke-width='2.5' />
+            <path d="M 205 93 l -60 0" stroke-width='2' />
+            <circle cx='165' cy='138' r='15' stroke-width='2.5' />
+            <path d="M 145 138 l -19 0" stroke-width='2' />
+            <circle cx='240' cy='196' r='15' stroke-width='2.5' />
+            <path d="M 220 196 l -80 0" stroke-width='2' />
+            <circle cx='180' cy='231' r='15' stroke-width='2.5' />
+            <path d="M 160 231 l -30 0" stroke-width='2' />
+        </g>
+
+        <g id='ruler'>
+            <rect x='200' y='75' width='30' height='150' stroke-width='2.5px' rx='5' />
+            <path
+                d="M 200 80 l 5 0 m -5 10 l 5 0 m -5 10 l 5 0 m -5 10 l 5 0 m -5 10 l 5 0 m -5 10 l 5 0 m -5 10 l 5 0 m -5 10 l 5 0 m -5 10 l 5 0 m -5 10 l 5 0 m -5 10 l 5 0 m -5 10 l 5 0 m -5 10 l 5 0 m -5 10 l 5 0 m -5 10 l 5 0"
+                stroke-width='1.5px' />
+        </g>
+
+        <g id='pheno' transform='translate(-150 -150)'>
+
+            <g clip-path='url(#frame-clip)' stroke-linecap='round' stroke-linejoin='round'>
+                <g transform='translate(10)'>
+                    <rect x='65' y='75' width='120' height='170' rx='5' stroke-width='2.5' />
+                    <g id='item'>
+                        <circle cx='87' cy='100' r='7' stroke-width='1.5px' />
+                        <path d="M 105 100 l 65 0" stroke-width='1.5px' />
+                    </g>
+                    <use href='#item' transform='translate(0 30)' />
+                    <use href='#item' transform='translate(0 60)' />
+                    <use href='#item' transform='translate(0 90)' />
+                    <use href='#item' transform='translate(0 120)' />
+                    <path id='tick' d="M 86 103 l -7 -10 M 86 103 l 10 -16" stroke-width='1.5px' />
+                    <use href='#tick' transform='translate(0 60)' />
+                    <use href='#tick' transform='translate(0 90)' />
+                </g>
+                <path d="M 235 120 l 0 100 l -6 0 l 0 -100 l 6 0 l -3 -8 l -3 8" stroke-width='1.5'
+                    stroke-linecap='round' stroke-linejoin='round' />
+            </g>
+            <use href='#frame' />
+        </g>
+
+        <g id='geno' stroke-linecap='round' stroke-linejoin='round' transform='translate(-150 -150)'>
+            <g clip-path='url(#frame-clip)'>
+                <use href='#double-helix' />
+                <use href='#chip' />
+            </g>
+            <use href='#frame' />
+        </g>
+
+        <g id='sumstats' stroke-linecap='round' stroke-linejoin='round' transform='translate(-150 -150)'>
+            <g clip-path='url(#frame-clip)'>
+                <use href='#double-helix' />
+                <use href='#lollipops' />
+            </g>
+            <use href='#frame' />
+        </g>
+
+        <g id='prs' stroke-linecap='round' stroke-linejoin='round' transform='translate(-150 -150)'>
+            <g clip-path='url(#frame-clip)'>
+                <use href='#double-helix' />
+                <use href='#ruler' />
+            </g>
+            <use href='#frame' />
+        </g>
+        
+        <pattern id='geno-pattern' x='0' y='0' width='1000' height='866' patternUnits='userSpaceOnUse'>
+            <use href='#prs' fill='none' x='0' y='433' />
+            <use href='#prs' fill='none' x='1000' y='433' />
+            <use href='#geno' fill='none' x='250' y='0' />
+            <use href='#geno' fill='none' x='250' y='866' />
+            <use href='#sumstats' fill='none' x='750' y='0' />
+            <use href='#sumstats' fill='none' x='750' y='866' />
+            <use href='#pheno' fill='none' x='500' y='433' />
+            <!-- <rect x='0' y='0' width='100%' height='100%' fill='none' stroke-width='3px' />             -->
+        </pattern>
+        
+    </defs>
+
+        <rect id='geno-wallpaper' x='0' y='0' width='100%' height='100%' fill='url(#geno-pattern)' stroke-width='7px' />
+</svg>
