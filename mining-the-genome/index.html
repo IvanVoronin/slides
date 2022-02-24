@@ -31,7 +31,7 @@ class: title-slide
 &lt;script&gt;
 $(document).ready(function() {
     $('#svg-lib').prependTo('body');
-    $('#navig-links').appendTo('.remark-slide-content')
+    $('#navig-links').appendTo('.remark-slide-content');
 });
 &lt;/script&gt;
 
@@ -427,7 +427,6 @@ style='stroke:white;text-color:white;fill:none;opacity:0.5;'>
     <rect id='list-icon' x='10' y='10' width='80' height='80' stroke-width='5' rx='10' fill='white' 
 mask='url(#list-mask)'/>
 </defs>
-<use href='#list-icon'/>
 </svg><!-- 
 Author: Ivan Voronin
 https://github.com/IvanVoronin
@@ -524,7 +523,7 @@ name: first-panel
 class: main-panel
 
 &lt;div class='main-panel-svg'&gt;
-&lt;svg viewBox="0 -50 4000 2850" font-family='Noto Sans'
+&lt;svg viewBox="0 -50 4000 2850"
     style='stroke:white;text-color:white;fill:none;'&gt;
     &lt;g class='active-panel' transform='translate(1000 800)'&gt;
         &lt;text x='-200' y='-700' font-size='45px' fill='white' text-anchor='middle'&gt;Phenotype&lt;/text&gt;
@@ -598,8 +597,10 @@ Discrete traits are usually a diagnostic status of disorder
 
 .right-col.center[
 &lt;img src="pics/pheno-1.png" width="80%" /&gt;
-
 &lt;img src="pics/pheno-2.png" width="80%" /&gt;
+
+
+
 
 ]
 
